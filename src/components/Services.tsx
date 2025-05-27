@@ -13,25 +13,25 @@ const Services = () => {
       title: "Web Design",
       description: "Beautiful and responsive websites that convert visitors into customers",
       icon: "💻",
-      image: "/WebDesign.png"
+      image: "/WebDesign.PNG"
     },
     {
       title: "Content Creation",
       description: "Engaging content that tells your brand story and connects with your audience",
       icon: "📝",
-      image: "/ContentCreation.png"
+      image: "/ContentCreation.PNG"
     },
     {
       title: "Ads Management",
       description: "Strategic advertising campaigns that maximize your ROI across all platforms",
       icon: "📈",
-      image: "/AdManage.png"
+      image: "/AdManage.PNG"
     },
     {
       title: "AI Automation",
       description: "Smart automation solutions to streamline your business processes",
       icon: "🤖",
-      image: "/AIAuto.png"
+      image: "/AIAuto.PNG"
     }
   ];
 
