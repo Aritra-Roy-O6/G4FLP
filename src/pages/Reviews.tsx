@@ -157,9 +157,14 @@ const Reviews = () => {
               Leave a Review
             </button>
             
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-300 block mx-auto">
+            <a 
+              href="https://calendly.com/go4frontagency/30min" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-300 block mx-auto"
+            >
               Book a Call to Discuss Your Project
-            </button>
+            </a>
           </div>
         </div>
       </main>

@@ -13,25 +13,25 @@ const Services = () => {
       title: "Web Design",
       description: "Beautiful and responsive websites that convert visitors into customers",
       icon: "💻",
-      image: "/WebDesign.PNG"
+      image: "/WebDesign.png"
     },
     {
       title: "Content Creation",
       description: "Engaging content that tells your brand story and connects with your audience",
       icon: "📝",
-      image: "/ContentCreation.PNG"
+      image: "/ContentCreation.png"
     },
     {
       title: "Ads Management",
       description: "Strategic advertising campaigns that maximize your ROI across all platforms",
       icon: "📈",
-      image: "/AdManage.PNG"
+      image: "/AdManage.png"
     },
     {
       title: "AI Automation",
       description: "Smart automation solutions to streamline your business processes",
       icon: "🤖",
-      image: "/AIAuto.PNG"
+      image: "/AIAuto.png"
     }
   ];
 
@@ -63,7 +63,7 @@ const Services = () => {
           >
             <CarouselContent className="-ml-2 md:-ml-4">
               {services.map((service, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 basis-3/5 md:basis-2/5 lg:basis-1/3">
+                <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
                   <div
                     className="group relative p-8 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 animate-fade-in border border-gray-200/50 dark:border-gray-700/50 h-80 overflow-hidden cursor-pointer flex flex-col justify-center items-center"
                     style={{ animationDelay: `${index * 100}ms` }}

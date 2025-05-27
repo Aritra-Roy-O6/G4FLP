@@ -17,10 +17,15 @@ const Footer = () => {
             <p className="text-black-300 mb-6 max-w-md leading-relaxed">
               Transforming businesses through innovative digital solutions. Let's create something amazing together.
             </p>
-            <button className="gradient-primary text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center gap-2">
+            <a 
+              href="https://calendly.com/go4frontagency/30min" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="gradient-primary text-white px-4 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center gap-2 inline-block"
+            >
               Book a Call
               <ArrowUpRight size={16} />
-            </button>
+            </a>
           </div>
           
           <div>
@@ -36,7 +41,7 @@ const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-4">Contact</h3>
             <ul className="space-y-2 text-gray-300">
-              <li>support@go4front.com</li>
+              <li><a href="https://www.gmail.com" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--primary-turquoise)] transition-colors">support@go4front.com</a></li>
               <li>+91 94771 30260</li>
               <li>Calcutta, West Bengal</li>
             </ul>

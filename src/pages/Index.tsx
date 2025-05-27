@@ -12,6 +12,7 @@ import CustomCursor from '../components/CustomCursor';
 const Index = () => {
   const [isDark, setIsDark] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     if (isDark) {
@@ -20,6 +21,18 @@ const Index = () => {
       document.documentElement.classList.remove('dark');
     }
   }, [isDark]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const toggleTheme = () => {
     setIsDark(!isDark);
@@ -33,19 +46,23 @@ const Index = () => {
     setIsMenuOpen(false);
   };
 
+  const isMobile = screenWidth < 768; // Define your mobile breakpoint
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-purple-50/30 to-teal-50/30 dark:from-gray-900 dark:via-purple-900/20 dark:to-teal-900/20 transition-all duration-500">
-      <CustomCursor />
+      {!isMobile && <CustomCursor />}
       
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200/20 dark:border-gray-700/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <img src="/logo.png" alt="Go4Front Logo" className="w-8 h-8 mr-2"/>
-              <div className="font-bold text-2xl gradient-text">
-                Go4Front
-              </div>
+              <button onClick={() => scrollToSection('hero')} className="flex items-center">
+                <img src="/logo.png" alt="Go4Front Logo" className="w-8 h-8 mr-2"/>
+                <div className="font-bold text-2xl gradient-text">
+                  Go4Front
+                </div>
+              </button>
             </div>
             
             {/* Desktop Navigation */}
@@ -71,9 +88,14 @@ const Index = () => {
               >
                 {isDark ? <Sun size={20} /> : <Moon size={20} />}
               </button>
-              <button className="gradient-primary text-white px-6 py-2 rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-300 font-semibold">
+              <a 
+                href="https://calendly.com/go4frontagency/30min" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="gradient-primary text-white px-6 py-2 rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-300 font-semibold"
+              >
                 Book a Call
-              </button>
+              </a>
             </div>
 
             {/* Mobile Menu Button */}
@@ -113,9 +135,14 @@ const Index = () => {
               <button onClick={() => scrollToSection('reviews')} className="block w-full text-left text-gray-700 dark:text-gray-300 hover:text-[var(--primary-purple)] dark:hover:text-[var(--primary-turquoise)] transition-colors">
                 Reviews
               </button>
-              <button className="w-full gradient-primary text-white px-6 py-2 rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-300 font-semibold">
+              <a 
+                href="https://calendly.com/go4frontagency/30min" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-full gradient-primary text-white px-6 py-2 rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-300 font-semibold inline-block text-center"
+              >
                 Book a Call
-              </button>
+              </a>
             </div>
           </div>
         )}

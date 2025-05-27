@@ -174,9 +174,14 @@ const Works = () => {
           </div>
 
           <div className="text-center mt-16">
-            <button className="gradient-primary text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+            <a 
+              href="https://calendly.com/go4frontagency/30min" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="gradient-primary text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-300 inline-block"
+            >
               Book a Call to Discuss Your Project
-            </button>
+            </a>
           </div>
         </div>
       </main>

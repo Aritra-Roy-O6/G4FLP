@@ -8,35 +8,33 @@ const Pricing = () => {
     {
       name: "Starter",
       features: [
-        "Basic website design",
-        "Mobile responsive",
-        "5 pages included",
-        "Basic SEO optimization",
-        "Email support"
+        "Fully responsive modern website (simple backend)",
+        "Upto 6 trendy edited Reels",
+        "Strategic content based on trends",
+        "Custom brand based designed posts"
       ],
       popular: false
     },
     {
-      name: "Professional",
+      name: "Dominance.",
       features: [
-        "Custom website design",
-        "Advanced animations",
-        "15 pages included",
-        "Advanced SEO & Analytics",
-        "Priority support",
-        "E-commerce integration"
+        "All features of Growth",
+        "Further enhanced 3D content",
+        "...and website (advanced backend too!)",
+        "Personalized AI automations, agents and chatbots.",
+        "I mean you need nothing more."
+
       ],
       popular: true
     },
     {
-      name: "Enterprise",
+      name: "Growth",
       features: [
-        "Complete digital solution",
-        "Unlimited pages",
-        "Custom development",
-        "24/7 dedicated support",
-        "Advanced integrations",
-        "Performance optimization"
+        "Complete website (custom 3D animations!, simple backend)",
+        "Upto 12 trendy brand based edited Reels",
+        "Strategic content based on brand",
+        "IG/FB Ads management",
+        "Priority support and future discounts",
       ],
       popular: false
     }
@@ -45,35 +43,35 @@ const Pricing = () => {
   const individualServices = [
     {
       name: "Web Design & Development",
-      description: "Custom website design and development",
+      description: "Custom website design and development, support after deployment, responsive in all devices, simple backend. 3D websites, advance backend features can be added.",
       icon: "💻"
     },
     {
       name: "Content Creation",
-      description: "Engaging content for all platforms",
+      description: "Engaging content for all platforms, trend-brand based strategic content to increase viral potential. 3D edits, high end motion graphics, cinematic videos can be added",
       icon: "📝"
     },
     {
       name: "Ads Management",
-      description: "Strategic advertising campaigns",
+      description: "Strategic advertising campaigns in social medias to ensure your business reaches the right audience.",
       icon: "📈"
     },
     {
       name: "AI Automation",
-      description: "Smart automation solutions",
+      description: "Smart automation solutions, the X factor of successful business. Let AI do the repeatitive heavy lifting so that you can focus on what matters. Custom AI agents, chatbots and AI powered solutions for your brand needs.",
       icon: "🤖"
     }
   ];
 
   return (
-    <section className="py-20 bg-white/70 dark:bg-gray-900/70 backdrop-blur-sm transition-colors duration-500">
+    <section id="pricing" className="py-20 bg-white/70 dark:bg-gray-900/70 backdrop-blur-sm transition-colors duration-500">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             Our <span className="gradient-text">Plans</span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
-            Choose the perfect plan for your business needs
+            Choose the perfect plan for your business needs.<br/> PS: You can also ask for customized packages according to your needs.
           </p>
           
           {/* Toggle Buttons */}
@@ -118,7 +116,7 @@ const Pricing = () => {
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="gradient-primary text-white px-4 py-1 rounded-full text-sm font-semibold">
-                      Best Offer
+                      AI Automations
                     </div>
                   </div>
                 )}
@@ -168,9 +166,14 @@ const Pricing = () => {
 
         {/* Add single Book a Call button below the plans */}
         <div className="text-center mt-12">
-          <button className="gradient-primary text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+          <a 
+            href="https://calendly.com/go4frontagency/30min" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="gradient-primary text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-300 inline-block"
+          >
             Choose & Call
-          </button>
+          </a>
         </div>
 
       </div>

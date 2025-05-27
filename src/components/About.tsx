@@ -34,9 +34,14 @@ const About = () => {
               Our team expertly handles your ads management to ensure your message reaches the right people. And, for a strong online home, we build powerful full-stack websites from the ground up.
               Think of us as your go-to team, connecting all your digital efforts to help your brand move to the forefront.
             </p>
-            <button className="gradient-primary text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
-              Let's talk buisness
-            </button>
+            <a 
+              href="https://calendly.com/go4frontagency/30min" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="gradient-primary text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300 inline-block"
+            >
+              Let's talk business
+            </a>
           </div>
           <div className="animate-fade-in animation-delay-300">
             <div className="relative">
